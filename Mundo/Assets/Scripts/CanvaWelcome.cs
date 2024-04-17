@@ -7,6 +7,9 @@ public class CanvaWelcome : MonoBehaviour
     private static CanvaWelcome instance;
     public Canvas WelcCanva;
     public Canvas ProfCanva;
+    public Transform Parm;
+    public Transform Erald;
+    private float speed = 3.0f;
     // Start is called before the first frame update
     public void Awake()
     {
@@ -19,7 +22,16 @@ public class CanvaWelcome : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3 positionP = Parm.position;
+        Vector3 positionE = Erald.position;
+
+        positionP.y += Mathf.Cos(Time.time) * Time.deltaTime * speed * 2;
+        positionE.y += Mathf.Sin(Time.time) * Time.deltaTime * speed * 2;
+
+        Parm.position = positionP;
+        Erald.position = positionE;
+
+
     }
     public void B_ProfileCanva()
     {

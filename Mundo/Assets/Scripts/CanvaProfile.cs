@@ -6,6 +6,8 @@ public class CanvaProfile : MonoBehaviour
 {
     private static CanvaProfile instance;
     public Canvas ProfCanva;
+    public Canvas GameHudCanva;
+
 
     void Awake()
     {
@@ -25,6 +27,7 @@ public class CanvaProfile : MonoBehaviour
     public void B_OnHandleButtonStart()
     {
         ProfCanva.gameObject.SetActive(false);
+        GameHudCanva.gameObject.SetActive(true);
     }
 
     public static CanvaProfile GetInstance()
