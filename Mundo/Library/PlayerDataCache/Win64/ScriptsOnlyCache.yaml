@@ -2,8 +2,11 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Animation_esmerald
+    - Cam
     - CanvaProfile
     - CanvaWelcome
+    UniHumanoid:
+    - UniHumanoid.HumanPoseClip
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
@@ -90,6 +93,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
@@ -98,36 +103,42 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 111
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1602}
+      Script: {instanceID: 1624}
     - Class: 114
-      Script: {instanceID: 1788}
+      Script: {instanceID: 1842}
     - Class: 114
-      Script: {instanceID: 2184}
+      Script: {instanceID: 2322}
     - Class: 114
-      Script: {instanceID: 2604}
+      Script: {instanceID: 2834}
     - Class: 114
-      Script: {instanceID: 2808}
+      Script: {instanceID: 3060}
     - Class: 114
-      Script: {instanceID: 3098}
+      Script: {instanceID: 3398}
     - Class: 114
-      Script: {instanceID: 3976}
+      Script: {instanceID: 3628}
     - Class: 114
-      Script: {instanceID: 4084}
+      Script: {instanceID: 4486}
     - Class: 114
-      Script: {instanceID: 4336}
+      Script: {instanceID: 4616}
     - Class: 114
-      Script: {instanceID: 4908}
+      Script: {instanceID: 4924}
     - Class: 114
-      Script: {instanceID: 5042}
+      Script: {instanceID: 5616}
     - Class: 114
-      Script: {instanceID: 5588}
+      Script: {instanceID: 5774}
     - Class: 114
-      Script: {instanceID: 5740}
+      Script: {instanceID: 6430}
     - Class: 114
-      Script: {instanceID: 5958}
+      Script: {instanceID: 6644}
     - Class: 114
-      Script: {instanceID: 6058}
+      Script: {instanceID: 6920}
+    - Class: 114
+      Script: {instanceID: 7044}
+    - Class: 114
+      Script: {instanceID: 40630}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -225,6 +236,12 @@ ScriptsOnlyBuild:
     className: SimpleScript
   - hash:
       serializedVersion: 2
+      Hash: 99372b292eb0bf52cea2e7306f1e74c5
+    assemblyName: VRM10
+    namespaceName: UniVRM10
+    className: VRM10Expression
+  - hash:
+      serializedVersion: 2
       Hash: b12640dfdb5966813e9dd838893e6c4a
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -273,6 +290,12 @@ ScriptsOnlyBuild:
     className: UnityOnBecameVisibleMessageListener
   - hash:
       serializedVersion: 2
+      Hash: bbb0b46676f513df41403b62be3d07f7
+    assemblyName: VRM10
+    namespaceName: UniVRM10
+    className: VRM10SpringBoneColliderGroup
+  - hash:
+      serializedVersion: 2
       Hash: c9b1ea3bf987a2e780a24849503ca72e
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
@@ -297,16 +320,16 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
-      Hash: 04b6685b6f724c0d6024e6b6f96c8202
-    assemblyName: Unity.Timeline
-    namespaceName: UnityEngine.Timeline
-    className: TimelineAsset
-  - hash:
-      serializedVersion: 2
       Hash: ada873da50974d1e7ce247ffb296b0f3
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnCollisionEnterMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 04b6685b6f724c0d6024e6b6f96c8202
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: TimelineAsset
   - hash:
       serializedVersion: 2
       Hash: 7e12302f66e3c8ed5bcfea4ce65fccea
@@ -441,6 +464,12 @@ ScriptsOnlyBuild:
     className: VariablesAsset
   - hash:
       serializedVersion: 2
+      Hash: ec8e6b10fb748d7ed464bb83fb744096
+    assemblyName: UniHumanoid
+    namespaceName: UniHumanoid
+    className: HumanPoseClip
+  - hash:
+      serializedVersion: 2
       Hash: 7bdff9e91edfd9600f92a185def7e34a
     assemblyName: Unity.VisualScripting.Flow
     namespaceName: Unity.VisualScripting
@@ -525,10 +554,22 @@ ScriptsOnlyBuild:
     className: UnityOnPointerExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 563bd47a9fd1493a1be29580a4e43432
+    assemblyName: VRM10
+    namespaceName: UniVRM10
+    className: VRM10Object
+  - hash:
+      serializedVersion: 2
       Hash: 1deda86fe7ffd8587afcfe68a02d034c
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: EnvMapAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 055837f504942fd724fa06965a078cc9
+    assemblyName: UniGLTF
+    namespaceName: UniGLTF
+    className: RuntimeGltfInstance
   - hash:
       serializedVersion: 2
       Hash: 665da785348a8806bf1524fe10742a60
@@ -541,6 +582,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: 2daee6f40e003ecd28ea4215f8dde8d5
+    assemblyName: VRM10
+    namespaceName: UniVRM10.Sample
+    className: Sample
+  - hash:
+      serializedVersion: 2
+      Hash: 0309b8a9291f74e606add5a571f3cbe2
+    assemblyName: VRM10
+    namespaceName: UniVRM10
+    className: Vrm10AnimationInstance
   - hash:
       serializedVersion: 2
       Hash: 4718916586b3818eb69bf65df61f0f3a
@@ -559,6 +612,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 8715560fafc5f16f075eb3bf7594f81d
+    assemblyName: UniHumanoid
+    namespaceName: UniHumanoid
+    className: MuscleDebug
+  - hash:
+      serializedVersion: 2
+      Hash: fde381bda15dd9ce9786530046c378cc
+    assemblyName: UniHumanoid
+    namespaceName: UniHumanoid
+    className: BoneGizmoDrawer
   - hash:
       serializedVersion: 2
       Hash: c78ed13f6b5a632d70d4f73f56ad81f2
@@ -603,10 +668,22 @@ ScriptsOnlyBuild:
     className: CameraController
   - hash:
       serializedVersion: 2
+      Hash: 3189de5003b13d40354347729ec14c7a
+    assemblyName: UniHumanoid
+    namespaceName: UniHumanoid
+    className: MuscleInspector
+  - hash:
+      serializedVersion: 2
       Hash: 9ebc0a3016506a0cbb7e0306dfcb9497
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: DictionaryAsset
+  - hash:
+      serializedVersion: 2
+      Hash: f8f87489515021941d65fbfd5f526345
+    assemblyName: UniHumanoid
+    namespaceName: UniHumanoid
+    className: AvatarDescription
   - hash:
       serializedVersion: 2
       Hash: e7e95903ca66d58e1a7cbd71f824e16d
@@ -795,6 +872,12 @@ ScriptsOnlyBuild:
     className: TMP_DigitValidator
   - hash:
       serializedVersion: 2
+      Hash: e33dbdd54a1cefdee6383cb7acb72f39
+    assemblyName: VRM10
+    namespaceName: UniVRM10
+    className: VRM10SpringBoneJoint
+  - hash:
+      serializedVersion: 2
       Hash: d82086405f46de14829f6b4bcbdd8fc9
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -843,10 +926,28 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
+      Hash: dc7c6e0562a97d8093894c558e0a3757
+    assemblyName: VRM10
+    namespaceName: UniVRM10
+    className: Vrm10RotationConstraint
+  - hash:
+      serializedVersion: 2
       Hash: 4166580c620718548959a77fa7b43fc1
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: TextMeshSpawner
+  - hash:
+      serializedVersion: 2
+      Hash: 26854db9ddeff36245f366b5254c156a
+    assemblyName: UniHumanoid
+    namespaceName: UniHumanoid
+    className: HandRig
+  - hash:
+      serializedVersion: 2
+      Hash: 80958a220b168b33ebba29b4a5783435
+    assemblyName: VRM10
+    namespaceName: UniVRM10
+    className: PreviewSceneManager
   - hash:
       serializedVersion: 2
       Hash: ef38c1407dba8c1f5d69f5db61a694fe
@@ -867,10 +968,22 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: cd0dfa4210abb269d31d70b054e5a79d
+    assemblyName: VRM10
+    namespaceName: UniVRM10
+    className: PrefabRelatedScriptableObject
+  - hash:
+      serializedVersion: 2
       Hash: da5a949a0bbd2ff91bc51c5805c2c41f
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseUpAsButtonMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 1102c651ea6b86211906a3ac4a618ff2
+    assemblyName: VRM10
+    namespaceName: UniVRM10
+    className: VRM10SpringBoneCollider
   - hash:
       serializedVersion: 2
       Hash: fc0a9a681d29388386a9abf3f08b024a
@@ -963,6 +1076,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: eb1806463ff11c5913273da42ce4321d
+    assemblyName: UniHumanoid
+    namespaceName: UniHumanoid
+    className: Humanoid
+  - hash:
+      serializedVersion: 2
       Hash: c4b85a67513b4f0cf7b5fb2d5ded04b0
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -991,6 +1110,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
     className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 2be2830464461b8733a553c692b743c9
+    assemblyName: VRM10
+    namespaceName: UniVRM10
+    className: Vrm10AimConstraint
   - hash:
       serializedVersion: 2
       Hash: 19824dd35debb3fff0983df49f8359ab
@@ -1065,6 +1190,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: ff29bd802b3bd5924e6550bf3ee547a4
+    assemblyName: VRM10
+    namespaceName: UniVRM10
+    className: Vrm10Instance
+  - hash:
+      serializedVersion: 2
       Hash: 67272c9c30c50b68ef1ce72ac0191c57
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1083,10 +1214,28 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: cbd766ef1c8aa0174a18f8bd4e76d85b
+    assemblyName: UniGLTF
+    namespaceName: UniGLTF.MeshUtility
+    className: BindposeGizmo
+  - hash:
+      serializedVersion: 2
+      Hash: 9ebdbcf4aa16c852ae88c9c4174a9ac2
+    assemblyName: UniHumanoid
+    namespaceName: UniHumanoid
+    className: BoneMapping
+  - hash:
+      serializedVersion: 2
       Hash: 9a174471d4db2c0c6d3ac47d2f818db1
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnParticleCollisionMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: dd12669afc948027560969b4c03d4d02
+    assemblyName: UniHumanoid
+    namespaceName: UniHumanoid
+    className: HumanPoseTransfer
   - hash:
       serializedVersion: 2
       Hash: 0f5a086d4d028363983ba6ca30a01397
@@ -1161,6 +1310,12 @@ ScriptsOnlyBuild:
     className: UnityOnToggleValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: e099b5a976ec29ed045916c0aeeb4bb2
+    assemblyName: VRM10
+    namespaceName: UniVRM10
+    className: Vrm10RollConstraint
+  - hash:
+      serializedVersion: 2
       Hash: 8bf800a764665b085fe469e8aea7f167
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1185,10 +1340,22 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerExit2DMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 0318c2c547f8255e3819f05f47eb4b48
+    assemblyName: FastSpringBone10
+    namespaceName: UniVRM10.FastSpringBones.System
+    className: FastSpringBoneService
+  - hash:
+      serializedVersion: 2
       Hash: 8b15e35eb98fc258ec2e839df7c3c9b0
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 698a2604c9aa7f1940882e19585c83d2
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Cam
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
