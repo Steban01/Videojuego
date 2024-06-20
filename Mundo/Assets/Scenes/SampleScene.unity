@@ -6822,11 +6822,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 687180947, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 687180949, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_Name
@@ -6974,7 +6974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114497868231759342, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: jumpStrength
-      value: 1.5
+      value: 1.07
       objectReference: {fileID: 0}
     - target: {fileID: 114503055206606986, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: isGrounded
@@ -6986,7 +6986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114963311885979670, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: speed
-      value: 1
+      value: 0.91
       objectReference: {fileID: 0}
     - target: {fileID: 114963311885979670, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: runSpeed
@@ -13097,6 +13097,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Goblin1: {fileID: 1499186694}
+  goblinSound: {fileID: 0}
+  sonidoMinDistancia: 1
+  sonidoMaxDistancia: 10
 --- !u!1 &1513358267 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5134196492992705100, guid: c38edc1575d751c4a9e155cba18d0d7d, type: 3}
@@ -13810,6 +13813,7 @@ MonoBehaviour:
   posicionTeletransporte: {x: 0, y: 0, z: 0}
   prota: {fileID: 1612296848}
   puntoDeGuardado: 114
+  sonidoEsmeralda: {fileID: 8300000, guid: bfd2d365d43abae45b048af319cf9805, type: 3}
 --- !u!1 &1613908217 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4979303695574437599, guid: c38edc1575d751c4a9e155cba18d0d7d, type: 3}
