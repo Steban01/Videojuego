@@ -7,6 +7,7 @@ public class CanvaProfile : MonoBehaviour
     private static CanvaProfile instance;
     public Canvas ProfCanva;
     public Canvas GameHudCanva;
+    public GameObject camEra;
 
 
     void Awake()
@@ -28,6 +29,7 @@ public class CanvaProfile : MonoBehaviour
     {
         ProfCanva.gameObject.SetActive(false);
         GameHudCanva.gameObject.SetActive(true);
+        camEra.gameObject.SetActive(true); 
     }
 
     public static CanvaProfile GetInstance()

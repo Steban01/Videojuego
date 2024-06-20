@@ -20,7 +20,6 @@ public class GoblingMove : MonoBehaviour
 
         // Actualizar posición en Z
         position.z += masmenos;
-        Debug.Log(position.z);
 
         if (position.z < 4.0f && position.z > 3.0f)
         {

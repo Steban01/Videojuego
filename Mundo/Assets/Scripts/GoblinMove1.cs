@@ -19,7 +19,6 @@ public class GoblinMove1 : MonoBehaviour
 
         // Actualizar posición en Z
         position.x += masmenos;
-        Debug.Log(position.x);
 
         if (position.x < 47.0f && position.x > 46.0f)
         {

@@ -10,9 +10,11 @@ public class CanvaWelcome : MonoBehaviour
     public Transform Parm;
     public Transform Erald;
     private float speed = 3.0f;
+    public GameObject camEra;
     // Start is called before the first frame update
     public void Awake()
     {
+        camEra.gameObject.SetActive(false);
         instance = this;
     }
     void Start()
