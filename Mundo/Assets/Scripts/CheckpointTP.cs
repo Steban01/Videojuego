@@ -10,6 +10,7 @@ public class CheckpointTP : MonoBehaviour
     private Vector3 checkPointActual;
     public KeyCode puntoDeGuardado = KeyCode.R;
     private float numeroEsmeraldas = 0;
+    public GameObject muro;
 
     // Variables para el audio
     public AudioClip sonidoEsmeralda; // Clip de audio que se reproducirá al recoger una esmeralda
@@ -37,6 +38,14 @@ public class CheckpointTP : MonoBehaviour
 
             // Reproduce el sonido de checkpoint
             ReproducirSonidoCheckpoint();
+        }else if (other.CompareTag("Inicio"))
+        {
+            // Establece el nuevo checkpoint
+            checkPointActual = other.transform.position;
+            Debug.Log("El personaje ha tocado un checkpoint en: " + checkPointActual);
+            checkPointActual.y += 0.2f;
+            Debug.Log("El checkpoint ajustado a: " + checkPointActual);
+
         }
         else if (other.CompareTag("Lava"))
         {
@@ -49,10 +58,22 @@ public class CheckpointTP : MonoBehaviour
             // Incrementa el conteo de esmeraldas
             numeroEsmeraldas += 1;
             Debug.Log("Esmeralda recogida. Total ahora: " + numeroEsmeraldas);
+            other.gameObject.SetActive(false);
 
             // Reproduce el sonido de esmeralda
             ReproducirSonidoEsmeralda();
         }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("cololo : " + collision.gameObject);
+        if (collision.gameObject.CompareTag("Enemigo"))
+        {
+            // Teletransporta al personaje al checkpoint actual
+            Debug.Log("El personaje ha tocado lava y será teletransportado a: " + checkPointActual);
+            prota.transform.position = checkPointActual;
+        }
+
     }
 
     // Método que se ejecuta en cada cuadro
@@ -84,6 +105,11 @@ public class CheckpointTP : MonoBehaviour
         else
         {
             Debug.LogWarning("No se ha asignado un sonido de esmeralda o el AudioSource no está configurado.");
+        }
+        if(numeroEsmeraldas == 3)
+        {
+            muro.gameObject.SetActive(false);
+            Debug.Log("Chao muro");
         }
     }
 
