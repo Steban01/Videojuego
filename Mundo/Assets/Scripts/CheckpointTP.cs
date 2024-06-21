@@ -13,6 +13,7 @@ public class CheckpointTP : MonoBehaviour
 
     // Variables para el audio
     public AudioClip sonidoEsmeralda; // Clip de audio que se reproducirá al recoger una esmeralda
+    public AudioClip sonidoCheckpoint; // Clip de audio que se reproducirá al tocar un checkpoint
     private AudioSource audioSource;
 
     // Método que se llama cuando el script es inicializado
@@ -33,14 +34,17 @@ public class CheckpointTP : MonoBehaviour
             Debug.Log("El personaje ha tocado un checkpoint en: " + checkPointActual);
             checkPointActual.y += 0.2f;
             Debug.Log("El checkpoint ajustado a: " + checkPointActual);
+
+            // Reproduce el sonido de checkpoint
+            ReproducirSonidoCheckpoint();
         }
-        if (other.CompareTag("Lava"))
+        else if (other.CompareTag("Lava"))
         {
             // Teletransporta al personaje al checkpoint actual
             Debug.Log("El personaje ha tocado lava y será teletransportado a: " + checkPointActual);
             prota.transform.position = checkPointActual;
         }
-        if (other.CompareTag("Esmeralda"))
+        else if (other.CompareTag("Esmeralda"))
         {
             // Incrementa el conteo de esmeraldas
             numeroEsmeraldas += 1;
@@ -80,6 +84,20 @@ public class CheckpointTP : MonoBehaviour
         else
         {
             Debug.LogWarning("No se ha asignado un sonido de esmeralda o el AudioSource no está configurado.");
+        }
+    }
+
+    // Método para reproducir el sonido de checkpoint
+    private void ReproducirSonidoCheckpoint()
+    {
+        if (sonidoCheckpoint != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(sonidoCheckpoint);
+            Debug.Log("Reproduciendo sonido de checkpoint.");
+        }
+        else
+        {
+            Debug.LogWarning("No se ha asignado un sonido de checkpoint o el AudioSource no está configurado.");
         }
     }
 

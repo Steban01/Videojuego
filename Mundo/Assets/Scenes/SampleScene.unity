@@ -3617,6 +3617,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2365331864027976906, guid: c38edc1575d751c4a9e155cba18d0d7d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 683214713}
+    - targetCorrespondingSourceObject: {fileID: -2365331864027976906, guid: c38edc1575d751c4a9e155cba18d0d7d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 683214715}
     - targetCorrespondingSourceObject: {fileID: -1095806814578748308, guid: c38edc1575d751c4a9e155cba18d0d7d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2011668820}
@@ -6778,13 +6781,26 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1318263723472899075, guid: c38edc1575d751c4a9e155cba18d0d7d, type: 3}
+--- !u!114 &683214715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683214709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b3a8d2e81c6b843867d7042e3c806c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  proximitySound: {fileID: 8300000, guid: bfd2d365d43abae45b048af319cf9805, type: 3}
 --- !u!1 &685905148 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3083444488772406170, guid: c38edc1575d751c4a9e155cba18d0d7d, type: 3}
@@ -13814,6 +13830,7 @@ MonoBehaviour:
   prota: {fileID: 1612296848}
   puntoDeGuardado: 114
   sonidoEsmeralda: {fileID: 8300000, guid: bfd2d365d43abae45b048af319cf9805, type: 3}
+  sonidoCheckpoint: {fileID: 8300000, guid: 9a292f60d8eea4b48bc7b7d89d9b68d8, type: 3}
 --- !u!1 &1613908217 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4979303695574437599, guid: c38edc1575d751c4a9e155cba18d0d7d, type: 3}
