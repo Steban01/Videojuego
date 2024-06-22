@@ -11,6 +11,7 @@ public class CheckpointTP : MonoBehaviour
     public KeyCode puntoDeGuardado = KeyCode.R;
     private float numeroEsmeraldas = 0;
     public GameObject muro;
+    public Canvas final;
 
     // Variables para el audio
     public AudioClip sonidoEsmeralda; // Clip de audio que se reproducirá al recoger una esmeralda
@@ -63,14 +64,17 @@ public class CheckpointTP : MonoBehaviour
             // Reproduce el sonido de esmeralda
             ReproducirSonidoEsmeralda();
         }
+        else if (other.CompareTag("CheckF") && numeroEsmeraldas ==10)
+        {
+            final.gameObject.SetActive(true);
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("cololo : " + collision.gameObject);
         if (collision.gameObject.CompareTag("Enemigo"))
         {
             // Teletransporta al personaje al checkpoint actual
-            Debug.Log("El personaje ha tocado lava y será teletransportado a: " + checkPointActual);
+            Debug.Log("El personaje ha tocado Enemigo y será teletransportado a: " + checkPointActual);
             prota.transform.position = checkPointActual;
         }
 
