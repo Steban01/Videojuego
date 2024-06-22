@@ -110,7 +110,7 @@ public class CheckpointTP : MonoBehaviour
         {
             Debug.LogWarning("No se ha asignado un sonido de esmeralda o el AudioSource no está configurado.");
         }
-        if(numeroEsmeraldas == 3)
+        if(numeroEsmeraldas == 6)
         {
             muro.gameObject.SetActive(false);
             Debug.Log("Chao muro");
