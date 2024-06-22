@@ -8,13 +8,16 @@ public class BeeMovement1 : MonoBehaviour
     public Transform Bee1;
     public float masmenos = 0.003f;
     private float cambio = -1f;
+    public float cambio = -1f;
     public bool x;
+    private float velocidad;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        velocidad = masmenos;
     }
 
     // Update is called once per frame
@@ -24,35 +27,33 @@ public class BeeMovement1 : MonoBehaviour
 
         if (x)
         {
-            Debug.Log("x");
             // Actualizar posición en x
-            position.x += masmenos;
+            position.x += velocidad;
 
             if (cambio > 0)
             {
-                masmenos = 0.003f;
+                velocidad = masmenos;
                 Bee1.rotation = Quaternion.Euler(0f, 90f, 0f);
             }
             else
             {
-                masmenos = -0.003f;
+                velocidad = -masmenos;
                 Bee1.rotation = Quaternion.Euler(0f, -90f, 0f);
             }
         }
         else if (!x)
         {
-            Debug.Log("z");
             // Actualizar posición en Z
-            position.z += masmenos;
+            position.z += velocidad;
 
             if (cambio > 0)
             {
-                masmenos = 0.003f;
+                velocidad = masmenos;
                 Bee1.rotation = Quaternion.Euler(0f, 0f, 0f);
             }
             else
             {
-                masmenos = -0.003f;
+                velocidad = -masmenos;
                 Bee1.rotation = Quaternion.Euler(0f, 180f, 0f);
             }
         }
@@ -67,6 +68,7 @@ public class BeeMovement1 : MonoBehaviour
         {
             cambio *= -1;
         }
+
         
     }
     private void OnCollisionEnter(Collision collision)
@@ -74,7 +76,8 @@ public class BeeMovement1 : MonoBehaviour
         if (collision.gameObject.CompareTag("TerrenoZ"))
         {
             cambio *= -1;
-            Debug.Log(cambio);
         }
+
+
     }
 }

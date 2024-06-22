@@ -9,6 +9,8 @@ TagManager:
   - Esmeralda
   - Inicio
   - TerrenoZ
+  - Enemigo
+  - TerrenoZ1
   layers:
   - Default
   - TransparentFX

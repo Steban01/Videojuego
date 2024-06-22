@@ -47,12 +47,6 @@ public class CheckpointTP : MonoBehaviour
             Debug.Log("El checkpoint ajustado a: " + checkPointActual);
 
         }
-        else if (other.CompareTag("Lava"))
-        {
-            // Teletransporta al personaje al checkpoint actual
-            Debug.Log("El personaje ha tocado lava y será teletransportado a: " + checkPointActual);
-            prota.transform.position = checkPointActual;
-        }
         else if (other.CompareTag("Esmeralda"))
         {
             // Incrementa el conteo de esmeraldas
@@ -66,12 +60,19 @@ public class CheckpointTP : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("cololo : " + collision.gameObject);
         if (collision.gameObject.CompareTag("Enemigo"))
+        {
+            // Teletransporta al personaje al checkpoint actual
+            Debug.Log("El personaje ha tocado un enemigo y será teletransportado a: " + checkPointActual);
+            prota.transform.position = checkPointActual;
+
+        }
+        if (collision.gameObject.CompareTag("Lava"))
         {
             // Teletransporta al personaje al checkpoint actual
             Debug.Log("El personaje ha tocado lava y será teletransportado a: " + checkPointActual);
             prota.transform.position = checkPointActual;
+
         }
 
     }
